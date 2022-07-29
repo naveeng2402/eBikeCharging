@@ -1,0 +1,769 @@
+[   
+    {
+        "place": "SRP Tools",
+        "lat": 12.979143,
+        "lon": 80.2525895
+    },
+
+    {
+        "place": "T.B.Institute",
+        "lat": 28.68662145,
+        "lon": 77.30881831622052
+    },
+
+    {
+        "place": "Kothari",
+        "lat": 20.681133850000002,
+        "lon": 77.21446466695411
+    },
+
+    {
+        "place": "Convent",
+        "lat": 9.26911675,
+        "lon": 76.77243855655561
+    },
+
+    {
+        "place": "CIPET ",
+        "lat": 13.0141314,
+        "lon": 80.2052179
+    },
+
+    {
+        "place": "Kathirvedu",
+        "lat": 13.1487214,
+        "lon": 80.203556
+    },
+
+    {
+        "place": "Triplicane",
+        "lat": 13.0604285,
+        "lon": 80.2750704
+    },
+
+    {
+        "place": "Pammal",
+        "lat": 12.9737938,
+        "lon": 80.1408
+    },
+
+    {
+        "place": "AMBATHUR ESTATE",
+        "lat": 13.0829582,
+        "lon": 80.1586004
+    },
+
+    {
+        "place": "Kambar Arangam",
+        "lat": 13.0993988,
+        "lon": 80.2210877
+    },
+
+    {
+        "place": "Taylors Road",
+        "lat": 13.0765224,
+        "lon": 80.2380547
+    },
+
+    {
+        "place": "Kovalam",
+        "lat": 8.4004698,
+        "lon": 76.9788156
+    },
+
+    {
+        "place": "CIT Nagar",
+        "lat": 13.0293843,
+        "lon": 80.2342825
+    },
+
+    {
+        "place": "Srinivasa Theater",
+        "lat": 18.42918255,
+        "lon": 79.13877227732021
+    },
+
+    {
+        "place": "Trustpuram",
+        "lat": 13.0555649,
+        "lon": 80.2233364
+    },
+
+    {
+        "place": "mylapore",
+        "lat": 13.0316473,
+        "lon": 80.2700166
+    },
+
+    {
+        "place": "echankuzhi",
+        "lat": 13.2230574,
+        "lon": 80.2721457
+    },
+
+    {
+        "place": "Vellaikal",
+        "lat": 10.6111506,
+        "lon": 78.4164527
+    },
+
+    {
+        "place": "T.Nagar",
+        "lat": 19.131916099999998,
+        "lon": 72.9165378
+    },
+
+    {
+        "place": "Melpakkam",
+        "lat": 13.078411,
+        "lon": 79.6547441
+    },
+
+    {
+        "place": "Kumaran Nagar",
+        "lat": 11.245557550000001,
+        "lon": 77.5100310361473
+    },
+
+    {
+        "place": "Veterinary Hospital",
+        "lat": 10.5031242,
+        "lon": 76.3364665
+    },
+
+    {
+        "place": "Ennore",
+        "lat": 13.2258262,
+        "lon": 80.3243551
+    },
+
+    {
+        "place": "P1.Police Station",
+        "lat": 9.8619639,
+        "lon": 76.5954839
+    },
+
+    {
+        "place": "CENTRAL",
+        "lat": 9.671402050000001,
+        "lon": 76.53421193093455
+    },
+
+    {
+        "place": "Teachers Colony",
+        "lat": 11.3322055,
+        "lon": 77.7063414
+    },
+
+    {
+        "place": "Dunlop",
+        "lat": 22.6543211,
+        "lon": 88.3592454
+    },
+
+    {
+        "place": "Saidapet",
+        "lat": 13.020817,
+        "lon": 80.2239536
+    },
+
+    {
+        "place": "TAMBARAM EAST",
+        "lat": 12.929761,
+        "lon": 80.1200478
+    },
+
+    {
+        "place": "Maduravoyal",
+        "lat": 13.0601732,
+        "lon": 80.1665988
+    },
+
+    {
+        "place": "Ramapuram",
+        "lat": 14.2012997,
+        "lon": 78.77085116013691
+    },
+
+    {
+        "place": "Thandarai ",
+        "lat": 12.1156626,
+        "lon": 79.1576797
+    },
+
+    {
+        "place": "Chinmaya Nagar",
+        "lat": 13.0622141,
+        "lon": 80.1991841
+    },
+
+    {
+        "place": "Virugambakkam",
+        "lat": 13.0475434,
+        "lon": 80.1922181
+    },
+
+    {
+        "place": "Parivakkam",
+        "lat": 13.0646104,
+        "lon": 80.0981675
+    },
+
+    {
+        "place": "Thiruvanmiyur",
+        "lat": 12.9907533,
+        "lon": 80.2562428
+    },
+
+    {
+        "place": "Jamalaya",
+        "lat": 13.106081,
+        "lon": 80.2487069
+    },
+
+    {
+        "place": "Slum Clearance Board",
+        "lat": 13.08578515,
+        "lon": 80.19828035
+    },
+
+    {
+        "place": "ASHOK PILLAR",
+        "lat": 13.0346747,
+        "lon": 80.2119332
+    },
+
+    {
+        "place": "Medavakkam Colony",
+        "lat": 12.9600718,
+        "lon": 80.1870876
+    },
+
+    {
+        "place": "AVADI",
+        "lat": 13.1194809,
+        "lon": 80.1026704
+    },
+
+    {
+        "place": "Manivakkam",
+        "lat": 12.8943694,
+        "lon": 80.0652271
+    },
+
+    {
+        "place": "Egmore",
+        "lat": 13.0728321,
+        "lon": 80.2576906
+    },
+
+    {
+        "place": "Ambathur OT",
+        "lat": 13.1228068,
+        "lon": 80.1483885
+    },
+
+    {
+        "place": "Mahalakshmi Nagar",
+        "lat": 9.4207466,
+        "lon": 77.5779401
+    },
+
+    {
+        "place": "MEDAVAKKAM KOOT ROAD,",
+        "lat": 12.9201913,
+        "lon": 80.1840803
+    },
+
+    {
+        "place": "Q.M.C",
+        "lat": 38.9054109,
+        "lon": -77.0573168
+    },
+
+    {
+        "place": "POONAMALLEE",
+        "lat": 13.0768552,
+        "lon": 80.05106225488868
+    },
+
+    {
+        "place": "Koyambedu Market",
+        "lat": 13.070430949999999,
+        "lon": 80.19323411924529
+    },
+
+    {
+        "place": "Thiruvanmiyur",
+        "lat": 12.9858948,
+        "lon": 80.2644215
+    },
+
+    {
+        "place": "Avadi",
+        "lat": 13.1194809,
+        "lon": 80.1026704
+    },
+
+    {
+        "place": "Periyar Bridge",
+        "lat": 13.072410099999999,
+        "lon": 80.2750940198835
+    },
+
+    {
+        "place": "Karapakkam",
+        "lat": 12.9117073,
+        "lon": 80.2277203
+    },
+
+    {
+        "place": "Cycle Shop",
+        "lat": 12.8299612,
+        "lon": 79.7035696
+    },
+
+    {
+        "place": "Corporation Boys School",
+        "lat": 13.0621251,
+        "lon": 80.23070915609946
+    },
+
+    {
+        "place": "Kottivakkam",
+        "lat": 12.9705053,
+        "lon": 80.2615033
+    },
+
+    {
+        "place": "Korukkupet",
+        "lat": 13.1215344,
+        "lon": 80.2837912
+    },
+
+    {
+        "place": "Dasaprakash",
+        "lat": 12.9765168,
+        "lon": 77.6029754
+    },
+
+    {
+        "place": "CIPET",
+        "lat": 13.0141314,
+        "lon": 80.2052179
+    },
+
+    {
+        "place": "MANGADU",
+        "lat": 10.3228991,
+        "lon": 79.0874004
+    },
+
+    {
+        "place": "Sterling Rd",
+        "lat": 13.0661749,
+        "lon": 80.2437004
+    },
+
+    {
+        "place": "Padappai",
+        "lat": 12.8876927,
+        "lon": 80.0220457
+    },
+
+    {
+        "place": "Ambathur Estate",
+        "lat": 13.0829582,
+        "lon": 80.1586004
+    },
+
+    {
+        "place": "ganesh Puram",
+        "lat": 8.1819194,
+        "lon": 77.428113
+    },
+
+    {
+        "place": "Neelankarai",
+        "lat": 12.9454955,
+        "lon": 80.2574692
+    },
+
+    {
+        "place": "karasangal",
+        "lat": 12.896871,
+        "lon": 80.0440183
+    },
+
+    {
+        "place": "S.R.P. Colony",
+        "lat": 8.4449769,
+        "lon": 77.1546346
+    },
+
+    {
+        "place": "Poonamallee",
+        "lat": 13.0768552,
+        "lon": 80.05106225488868
+    },
+
+    {
+        "place": "Mangadu",
+        "lat": 10.3228991,
+        "lon": 79.0874004
+    },
+
+    {
+        "place": "Moolakadai",
+        "lat": 13.1291684,
+        "lon": 80.2416991
+    },
+
+    {
+        "place": "Moulivakkam ",
+        "lat": 13.0222692,
+        "lon": 80.1413929
+    },
+
+    {
+        "place": "Arumbakkam",
+        "lat": 13.074371,
+        "lon": 80.2081312
+    },
+
+    {
+        "place": "Muttukkadu",
+        "lat": 10.486567,
+        "lon": 78.8204026
+    },
+
+    {
+        "place": "Palavakkam",
+        "lat": 12.95999,
+        "lon": 80.2560268
+    },
+
+    {
+        "place": "VELACHERY",
+        "lat": 12.980165450000001,
+        "lon": 80.22285056225584
+    },
+
+    {
+        "place": "Kelambakkam",
+        "lat": 12.7871437,
+        "lon": 80.219987
+    },
+
+    {
+        "place": "RED HILLS",
+        "lat": 13.1922788,
+        "lon": 80.1837662
+    },
+
+    {
+        "place": "Vinayagapuram",
+        "lat": 10.8994223,
+        "lon": 78.9031649
+    },
+
+    {
+        "place": "Kumaran Kundram",
+        "lat": 12.9439424,
+        "lon": 80.1424399
+    },
+
+    {
+        "place": "Sarma Nagar",
+        "lat": 26.135533,
+        "lon": 91.8091553
+    },
+
+    {
+        "place": "Pallavaram",
+        "lat": 12.989815700000001,
+        "lon": 80.10098654184341
+    },
+
+    {
+        "place": "Kandanchavadi",
+        "lat": 12.9632927,
+        "lon": 80.2466598
+    },
+
+    {
+        "place": "Concorde",
+        "lat": 28.565349750000003,
+        "lon": 77.24070019999999
+    },
+
+    {
+        "place": "Thazhankuppam",
+        "lat": 13.2271357,
+        "lon": 80.3281547
+    },
+
+    {
+        "place": "Chepauk",
+        "lat": 13.06363,
+        "lon": 80.2812779
+    },
+
+    {
+        "place": "Nature Care Hospital",
+        "lat": 28.7618377,
+        "lon": 77.1871469
+    },
+
+    {
+        "place": "Sipcot",
+        "lat": 9.715857,
+        "lon": 78.4649113
+    },
+
+    {
+        "place": "Thangal",
+        "lat": 12.9658761,
+        "lon": 79.1664946
+    },
+
+    {
+        "place": "Chittukadu",
+        "lat": 13.0910578,
+        "lon": 80.0485503
+    },
+
+    {
+        "place": "Injambakkam",
+        "lat": 12.9189367,
+        "lon": 80.251295
+    },
+
+    {
+        "place": "Ashok Layland",
+        "lat": 18.7606852,
+        "lon": 73.82519310414153
+    },
+
+    {
+        "place": "THIRUVERKADU",
+        "lat": 13.0727699,
+        "lon": 80.1204591
+    },
+
+    {
+        "place": "POWER HOUSE",
+        "lat": 9.539886,
+        "lon": 76.52068515755019
+    },
+
+    {
+        "place": "D.M.S",
+        "lat": 38.9054109,
+        "lon": -77.0573168
+    },
+
+    {
+        "place": "Panaiyur",
+        "lat": 11.1392241,
+        "lon": 79.5912266
+    },
+
+    {
+        "place": "Chrompet",
+        "lat": 12.9512199,
+        "lon": 80.1406421
+    },
+
+    {
+        "place": "adyar",
+        "lat": 13.000793763348224,
+        "lon": 80.25645287525978
+    },
+
+    {
+        "place": "Anna Nagar Circle",
+        "lat": 13.085754689588484,
+        "lon": 80.21541498146021
+    },
+
+    {
+        "place": "Karayanchavadi",
+        "lat": 13.048285666364947,
+        "lon": 80.1100461945639
+    },
+
+    {
+        "place": "kothari",
+        "lat": 13.062725446849843,
+        "lon": 80.23884306784407
+    },
+
+    {
+        "place": "Varadharaja Theater",
+        "lat": 12.937826039247676,
+        "lon": 80.1391205091497
+    },
+
+    {
+        "place": "Koyambedu P.S",
+        "lat": 13.069616505443594,
+        "lon": 80.20035337600707
+    },
+
+    {
+        "place": "Uthandi Village",
+        "lat": 12.868675317563046,
+        "lon": 80.24349488703459
+    },
+
+    {
+        "place": "Menamabakkam Old Airport",
+        "lat": 12.99324301653403,
+        "lon": 80.18380053167286
+    },
+
+    {
+        "place": "Guindy TVK Estate",
+        "lat": 13.013812093663317,
+        "lon": 80.21242613054396
+    },
+
+    {
+        "place": "Athipet Jn",
+        "lat": 13.09563472164095,
+        "lon": 80.15252560219899
+    },
+
+    {
+        "place": "Uthamar Gandhisalai (Corp)",
+        "lat": 13.060504810847021,
+        "lon": 80.24749062645162
+    },
+
+    {
+        "place": "Chemman Cheri",
+        "lat": 12.865425950259985,
+        "lon": 80.22696672951673
+    },
+
+    {
+        "place": "Jaffarkhan Pet",
+        "lat": 13.029940162375748,
+        "lon": 80.204807110722
+    },
+
+    {
+        "place": "PERAMBUR",
+        "lat": 13.12106663105107,
+        "lon": 80.2324610242738
+    },
+
+    {
+        "place": "Vanuvampet",
+        "lat": 12.975521126838707,
+        "lon": 80.19659110284755
+    },
+
+    {
+        "place": "Aminijikarai",
+        "lat": 13.069797650878098,
+        "lon": 80.22451538485355
+    },
+
+    {
+        "place": "Madhavaram Post Box",
+        "lat": 13.142810841186794,
+        "lon": 80.23618886137653
+    },
+
+    {
+        "place": " Central Institute of Petrochemicals Engineering & Technology",
+        "lat": 13.014384728985842,
+        "lon": 80.20540079964847
+    },
+
+    {
+        "place": "Kadirvedu",
+        "lat": 13.15210265403723,
+        "lon": 80.20006479921126
+    },
+
+    {
+        "place": "Sayani/Aynavaram",
+        "lat": 13.098436305444148,
+        "lon": 80.2388188555251
+    },
+
+    {
+        "place": "St Thomas Mount Post",
+        "lat": 13.001573942743828,
+        "lon": 80.19722592122986
+    },
+
+    {
+        "place": "TriplicaneSRP Tools",
+        "lat": 13.047577812621457,
+        "lon": 80.25525741629944
+    },
+
+    {
+        "place": "Nungambakkam R.S",
+        "lat": 13.058311852596717,
+        "lon": 80.24265660171889
+    },
+
+    {
+        "place": "Vaanagaram",
+        "lat": 13.057648058771768,
+        "lon": 80.15442998821499
+    },
+
+    {
+        "place": "Tiru Vi Ka Nagar",
+        "lat": 13.119942620082986,
+        "lon": 80.23422126343489
+    },
+
+    {
+        "place": "Kundrathur Bus Stand",
+        "lat": 12.997170220637914,
+        "lon": 80.09612716021681
+    },
+
+    {
+        "place": "Tuberculosis Research Centre",
+        "lat": 13.061269732486101,
+        "lon": 80.24233458359757
+    },
+
+    {
+        "place": "Kosapur",
+        "lat": 13.184281254760142,
+        "lon": 80.23660855524741
+    },
+
+    {
+        "place": "Velappanchavadi",
+        "lat": 13.058524201205811,
+        "lon": 80.13545221271028
+    },
+
+    {
+        "place": "Perungalathur (Old)",
+        "lat": 12.917374045401,
+        "lon": 80.08573493507863
+    },
+
+    {
+        "place": "Ponneri Rd&Eranoo",
+        "lat": 13.339849587414696,
+        "lon": 80.16960192551878
+    },
+
+    {
+        "place": "Andakuppam",
+        "lat": 13.194513961209095,
+        "lon": 80.26414752912541
+    }
+]

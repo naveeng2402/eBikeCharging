@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.debug {
+  @apply outline outline-8 outline-red-500/50;
+}
+.debug-b {
+  @apply border-8 border-red-500/50;
+}
