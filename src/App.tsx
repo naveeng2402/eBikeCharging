@@ -9,11 +9,17 @@ import {
   NavigationControl,
   MapRef,
   GeolocateControlRef,
+  LngLat,
 } from "react-map-gl";
 
 import data from "./assets/data.json";
 import Modal from "./components/Modal";
+import { dest } from "./data/dest";
+import getRouteData from "./utils/route";
+import { start } from "./data/start";
 import { MarkerShape } from "./types/markers";
+import getRoute from "./utils/getRoute";
+import getLocationGeojson from "./utils/getLocationGeojson";
 
 const App = () => {
   const mapRef = useRef<MapRef>(null);
@@ -22,6 +28,9 @@ const App = () => {
   const [markers, setMarkers] = useState<MarkerShape[]>([]);
   const [isSelected, setIsSelected] = useState<boolean>(false);
   const [selectedData, setSelectedData] = useState<MarkerShape>();
+  const [startLocation, setStartLocation] = useState<LngLat>();
+  const [destLocation, setDestLocation] = useState<LngLat>();
+  const [route, setRoute] = useState<number[][]>([]);
 
   useEffect(() => {
     setMarkers(data);
@@ -29,12 +38,21 @@ const App = () => {
     // TODO: Fetch the data from api
   }, []);
 
+  useEffect(() => {
+    const getRotutes = async () => {
+      const routeRaw = await getRoute(start, dest);
+      setRoute(routeRaw);
+      console.log(route);
+    };
+    getRotutes();
+  }, [start, dest]);
+
   const initialViewState = {
-    latitude: 13.084547176887455,
-    longitude: 79.95072330224205,
+    latitude: 13.02073768459028,
+    longitude: 80.21538956597244,
     width: "100vw",
     height: "100vh",
-    zoom: 10,
+    zoom: 18,
   };
 
   return (
@@ -46,7 +64,7 @@ const App = () => {
         mapboxAccessToken={import.meta.env.VITE_API_KEY}
         attributionControl={false}
         onLoad={() => {
-          console.log(geoLocateControlRef.current?.trigger());
+          geoLocateControlRef.current?.trigger();
         }}
       >
         <NavigationControl position="bottom-right" visualizePitch={true} />
@@ -71,7 +89,51 @@ const App = () => {
             ></Marker>
           );
         })}
+
+        <Source id="start" type="geojson" data={getLocationGeojson(start)}>
+          <Layer
+            id="start"
+            type="symbol"
+            layout={{
+              "icon-image": "in-national-3",
+              "icon-size": 1,
+            }}
+          ></Layer>
+        </Source>
+        <Source id="dest" type="geojson" data={getLocationGeojson(dest)}>
+          <Layer
+            id="dest"
+            type="symbol"
+            layout={{
+              "icon-image": "in-national-3",
+              "icon-size": 1,
+            }}
+          ></Layer>
+        </Source>
+
+        {route && (
+          <Source
+            id="route"
+            type="geojson"
+            data={getRouteData(route as number[][])}
+          >
+            <Layer
+              id="route"
+              type="line"
+              layout={{
+                "line-join": "round",
+                "line-cap": "round",
+              }}
+              paint={{
+                "line-color": "#006b00",
+                "line-width": 5,
+                "line-opacity": 0.5,
+              }}
+            ></Layer>
+          </Source>
+        )}
       </Map>
+
       <AnimatePresence>
         {isSelected && (
           <Modal
