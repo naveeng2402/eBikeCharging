@@ -13,6 +13,7 @@ import {
 } from "react-map-gl";
 
 import data from "./assets/data.json";
+import Modal from "./components/Modal";
 import { MarkerShape } from "./types/markers";
 
 function App() {
@@ -39,7 +40,7 @@ function App() {
   };
 
   return (
-    <div className="h-screen">
+    <div className="h-screen overflow-hidden">
       <Map
         ref={mapRef}
         initialViewState={initialViewState}
@@ -71,6 +72,16 @@ function App() {
           ></Marker>
         ))}
       </Map>
+
+      <AnimatePresence>
+        {isSelected && (
+          <Modal
+            isOpen={isSelected}
+            setIsOpen={setIsSelected}
+            data={selectedData as MarkerShape}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 }
