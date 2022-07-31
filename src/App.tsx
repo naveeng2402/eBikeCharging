@@ -1,4 +1,4 @@
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import {
   Map,
@@ -9,7 +9,6 @@ import {
   NavigationControl,
   MapRef,
   GeolocateControlRef,
-  LngLat,
 } from "react-map-gl";
 
 import data from "./assets/data.json";
@@ -18,6 +17,9 @@ import getRoute from "./utils/getRoute";
 import getLocationGeojson from "./utils/getLocationGeojson";
 import getRouteData from "./utils/route";
 import { MarkerShape } from "./types/markers";
+import { destDescShape } from "./types/destDesc";
+import { exitNavigationAnim } from "./animation/exitNavigation";
+import { destDescAnim } from "./animation/destDesc";
 
 function App() {
   const mapRef = useRef<MapRef>(null);
@@ -30,6 +32,7 @@ function App() {
     80.21514382454028, 13.019859686807509,
   ]);
   const [destLocation, setDestLocation] = useState<number[]>([]);
+  const [destDesc, setDestDesc] = useState<destDescShape>();
   const [route, setRoute] = useState<number[][]>([]);
 
   useEffect(() => {
@@ -41,10 +44,13 @@ function App() {
   useEffect(() => {
     const getRotutes = async () => {
       const routeRaw = await getRoute(startLocation, destLocation);
-      setRoute(routeRaw);
+      setRoute(routeRaw[0]);
+      setDestDesc((prev) => {
+        return { place: prev?.place as string, distance: routeRaw[1] };
+      });
       console.log(route);
     };
-    getRotutes();
+    destLocation.length > 0 && getRotutes();
   }, [startLocation, destLocation]);
 
   const initialViewState = {
@@ -65,76 +71,111 @@ function App() {
           geoLocateControlRef.current?.trigger();
         }}
       >
-        <NavigationControl position="bottom-right" visualizePitch={true} />
+        <NavigationControl position="top-right" visualizePitch={true} />
         <GeolocateControl
           ref={geoLocateControlRef}
           showUserHeading={true}
           showAccuracyCircle={true}
-          position="bottom-right"
+          position="top-right"
         />
 
-        {markers.map((marker, index) => (
-          <Marker
-            key={index}
-            latitude={marker.lat}
-            longitude={marker.lon}
-            onClick={(e) => {
-              // console.log(marker);
-              setIsSelected(true);
-              setSelectedData(marker);
-            }}
-          ></Marker>
-        ))}
+        {route.length === 0 &&
+          markers.map((marker, index) => (
+            <Marker
+              key={index}
+              latitude={marker.lat}
+              longitude={marker.lon}
+              onClick={(e) => {
+                // console.log(marker);
+                setIsSelected(true);
+                setSelectedData(marker);
+              }}
+            ></Marker>
+          ))}
 
-        <Source
-          id="start"
-          type="geojson"
-          data={getLocationGeojson(startLocation)}
-        >
-          <Layer
-            id="start"
-            type="symbol"
-            layout={{
-              "icon-image": "in-national-3",
-              "icon-size": 1,
-            }}
-          ></Layer>
-        </Source>
+        <AnimatePresence>
+          {route.length > 0 && (
+            <>
+              <Source
+                id="start"
+                type="geojson"
+                data={getLocationGeojson(startLocation)}
+              >
+                <Layer
+                  id="start"
+                  type="symbol"
+                  layout={{
+                    "icon-image": "in-national-3",
+                    "icon-size": 1,
+                  }}
+                ></Layer>
+              </Source>
+              <Source
+                id="dest"
+                type="geojson"
+                data={getLocationGeojson(destLocation)}
+              >
+                <Layer
+                  id="dest"
+                  type="symbol"
+                  layout={{
+                    "icon-image": "in-national-3",
+                    "icon-size": 1,
+                  }}
+                ></Layer>
+              </Source>
+              <Source
+                id="route"
+                type="geojson"
+                data={getRouteData(route as number[][])}
+              >
+                <Layer
+                  id="route"
+                  type="line"
+                  layout={{
+                    "line-join": "round",
+                    "line-cap": "round",
+                  }}
+                  paint={{
+                    "line-color": "#006b00",
+                    "line-width": 5,
+                    "line-opacity": 0.5,
+                  }}
+                ></Layer>
+              </Source>
 
-        <Source
-          id="dest"
-          type="geojson"
-          data={getLocationGeojson(destLocation)}
-        >
-          <Layer
-            id="dest"
-            type="symbol"
-            layout={{
-              "icon-image": "in-national-3",
-              "icon-size": 1,
-            }}
-          ></Layer>
-        </Source>
+              <motion.div
+                variants={exitNavigationAnim}
+                initial="hidden"
+                exit="hidden"
+                animate="visible"
+                className="absolute bottom-0 left-0 right-0 mb-4 flex items-center justify-center hover:bg-black"
+              >
+                <button
+                  className="rounded-md bg-red-500 px-10 py-2 text-xl text-white "
+                  onClick={() => {
+                    setDestLocation([]);
+                    setRoute([]);
+                    setDestDesc(undefined);
+                  }}
+                >
+                  Exit Navigation
+                </button>
+              </motion.div>
 
-        <Source
-          id="route"
-          type="geojson"
-          data={getRouteData(route as number[][])}
-        >
-          <Layer
-            id="route"
-            type="line"
-            layout={{
-              "line-join": "round",
-              "line-cap": "round",
-            }}
-            paint={{
-              "line-color": "#006b00",
-              "line-width": 5,
-              "line-opacity": 0.5,
-            }}
-          ></Layer>
-        </Source>
+              <motion.div
+                variants={destDescAnim}
+                initial="hidden"
+                exit="hidden"
+                animate="visible"
+                className="absolute top-0 left-0 mx-4 my-2 rounded-sm border-2 border-gray-800 bg-gray-600/80 px-4 py-2 text-white"
+              >
+                <p className="text-base">{destDesc?.place}</p>
+                <p className="text-base">{destDesc?.distance}</p>
+              </motion.div>
+            </>
+          )}
+        </AnimatePresence>
       </Map>
 
       <AnimatePresence>
@@ -144,6 +185,7 @@ function App() {
             setIsOpen={setIsSelected}
             data={selectedData as MarkerShape}
             setDestLocation={setDestLocation}
+            setDestDesc={setDestDesc}
           />
         )}
       </AnimatePresence>

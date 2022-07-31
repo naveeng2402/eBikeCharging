@@ -2,16 +2,24 @@ import { Dialog } from "@headlessui/react";
 import { motion } from "framer-motion";
 
 import { overlay, panel } from "../animation/Modal";
+import { destDescShape } from "../types/destDesc";
 import { MarkerShape } from "../types/markers";
 
 interface props {
   isOpen: boolean;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
   setDestLocation: React.Dispatch<React.SetStateAction<number[]>>;
+  setDestDesc: React.Dispatch<React.SetStateAction<destDescShape | undefined>>;
   data: MarkerShape;
 }
 
-const Modal = ({ isOpen, setIsOpen, data, setDestLocation }: props) => {
+const Modal = ({
+  isOpen,
+  setIsOpen,
+  data,
+  setDestLocation,
+  setDestDesc,
+}: props) => {
   return (
     <Dialog
       open={isOpen}
@@ -62,6 +70,7 @@ const Modal = ({ isOpen, setIsOpen, data, setDestLocation }: props) => {
           onClick={() => {
             setIsOpen(false);
             setDestLocation([data.lon, data.lat]);
+            setDestDesc({ place: data.place });
           }}
         >
           Go Charge

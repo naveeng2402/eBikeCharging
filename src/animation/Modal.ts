@@ -4,7 +4,7 @@ export const overlay = {
 };
 export const panel = {
   hidden: {
-    translateY: "100vh",
+    translateY: 10,
     opacity: 0,
     transition: { duration: 0.2, ease: "linear" },
   },
