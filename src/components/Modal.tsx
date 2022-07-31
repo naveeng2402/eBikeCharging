@@ -7,10 +7,11 @@ import { MarkerShape } from "../types/markers";
 interface props {
   isOpen: boolean;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  setDestLocation: React.Dispatch<React.SetStateAction<number[]>>;
   data: MarkerShape;
 }
 
-const Modal = ({ isOpen, setIsOpen, data }: props) => {
+const Modal = ({ isOpen, setIsOpen, data, setDestLocation }: props) => {
   return (
     <Dialog
       open={isOpen}
@@ -31,7 +32,7 @@ const Modal = ({ isOpen, setIsOpen, data }: props) => {
         initial="hidden"
         exit="hidden"
         animate="animate"
-        className="relative flex h-full w-full flex-col gap-3 rounded-t-3xl bg-emerald-800 p-5 md:h-screen md:w-1/4 md:min-w-fit md:rounded-none md:pt-[20%]"
+        className="relative flex h-full w-full flex-col gap-3 rounded-t-3xl bg-emerald-800 p-5 md:h-screen md:w-1/4 md:min-w-min  md:max-w-[40vw] md:rounded-none md:pt-[20%]"
       >
         <div className="flex h-full flex-col items-center justify-start gap-2">
           <Dialog.Title className="font-serif text-3xl font-semibold text-white">
@@ -57,7 +58,16 @@ const Modal = ({ isOpen, setIsOpen, data }: props) => {
         </div>
 
         <button
-          className="focus: rounded-md bg-green-500 py-2 text-xl font-bold text-white outline-none ring-offset-green-800 focus:ring focus:ring-green-500 focus:ring-offset-2"
+          className=" mt-6 rounded-md bg-green-500 py-2 text-xl font-bold text-white outline-none ring-offset-green-800 transition-all duration-150 hover:bg-green-400 focus:ring focus:ring-green-500 focus:ring-offset-2"
+          onClick={() => {
+            setIsOpen(false);
+            setDestLocation([data.lon, data.lat]);
+          }}
+        >
+          Go Charge
+        </button>
+        <button
+          className="box-border rounded-md border-4 border-green-500 bg-green-500/40 py-2 text-xl font-bold text-white outline-none ring-offset-green-800 hover:bg-green-500/50 focus:ring focus:ring-green-500 focus:ring-offset-2"
           onClick={() => setIsOpen(false)}
         >
           Done

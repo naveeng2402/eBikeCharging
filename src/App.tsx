@@ -14,6 +14,9 @@ import {
 
 import data from "./assets/data.json";
 import Modal from "./components/Modal";
+import getRoute from "./utils/getRoute";
+import getLocationGeojson from "./utils/getLocationGeojson";
+import getRouteData from "./utils/route";
 import { MarkerShape } from "./types/markers";
 
 function App() {
@@ -23,8 +26,10 @@ function App() {
   const [markers, setMarkers] = useState<MarkerShape[]>([]);
   const [isSelected, setIsSelected] = useState<boolean>(false);
   const [selectedData, setSelectedData] = useState<MarkerShape>();
-  const [startLocation, setStartLocation] = useState<LngLat>();
-  const [destLocation, setDestLocation] = useState<LngLat>();
+  const [startLocation, setStartLocation] = useState<number[]>([
+    80.21514382454028, 13.019859686807509,
+  ]);
+  const [destLocation, setDestLocation] = useState<number[]>([]);
   const [route, setRoute] = useState<number[][]>([]);
 
   useEffect(() => {
@@ -32,6 +37,15 @@ function App() {
 
     // TODO: Fetch the data from api
   }, []);
+
+  useEffect(() => {
+    const getRotutes = async () => {
+      const routeRaw = await getRoute(startLocation, destLocation);
+      setRoute(routeRaw);
+      console.log(route);
+    };
+    getRotutes();
+  }, [startLocation, destLocation]);
 
   const initialViewState = {
     latitude: 13.02073768459028,
@@ -71,6 +85,56 @@ function App() {
             }}
           ></Marker>
         ))}
+
+        <Source
+          id="start"
+          type="geojson"
+          data={getLocationGeojson(startLocation)}
+        >
+          <Layer
+            id="start"
+            type="symbol"
+            layout={{
+              "icon-image": "in-national-3",
+              "icon-size": 1,
+            }}
+          ></Layer>
+        </Source>
+
+        <Source
+          id="dest"
+          type="geojson"
+          data={getLocationGeojson(destLocation)}
+        >
+          <Layer
+            id="dest"
+            type="symbol"
+            layout={{
+              "icon-image": "in-national-3",
+              "icon-size": 1,
+            }}
+          ></Layer>
+        </Source>
+
+        <Source
+          id="route"
+          type="geojson"
+          data={getRouteData(route as number[][])}
+        >
+          <Layer
+            id="route"
+            type="line"
+            layout={{
+              "line-join": "round",
+              "line-cap": "round",
+            }}
+            paint={{
+              "line-color": "#006b00",
+              "line-width": 5,
+              "line-opacity": 0.5,
+            }}
+          ></Layer>
+        </Source>
       </Map>
 
       <AnimatePresence>
@@ -79,6 +143,7 @@ function App() {
             isOpen={isSelected}
             setIsOpen={setIsSelected}
             data={selectedData as MarkerShape}
+            setDestLocation={setDestLocation}
           />
         )}
       </AnimatePresence>
