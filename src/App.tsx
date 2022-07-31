@@ -153,10 +153,10 @@ function App() {
                 initial="hidden"
                 exit="hidden"
                 animate="visible"
-                className="absolute bottom-0 left-0 right-0 mb-4 flex items-center justify-center hover:bg-black"
+                className="absolute bottom-0 left-0 right-0 mb-4 flex items-center justify-center"
               >
                 <button
-                  className="rounded-md bg-red-500 px-10 py-2 text-xl text-white "
+                  className="rounded-md bg-red-500 px-10 py-2 text-xl text-white transition-all duration-100 hover:bg-red-600 "
                   onClick={() => {
                     setDestLocation([]);
                     setRoute([]);
