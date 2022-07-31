@@ -77,6 +77,9 @@ function App() {
           showUserHeading={true}
           showAccuracyCircle={true}
           position="top-right"
+          onGeolocate={(e) => {
+            setStartLocation([e.coords.longitude, e.coords.latitude]);
+          }}
         />
 
         {route.length === 0 &&
@@ -105,7 +108,7 @@ function App() {
                   id="start"
                   type="symbol"
                   layout={{
-                    "icon-image": "in-national-3",
+                    "icon-image": "dot-10",
                     "icon-size": 1,
                   }}
                 ></Layer>
@@ -119,8 +122,9 @@ function App() {
                   id="dest"
                   type="symbol"
                   layout={{
-                    "icon-image": "in-national-3",
-                    "icon-size": 1,
+                    "icon-image": "charging-station",
+                    "icon-size": 2,
+                    "icon-allow-overlap": true,
                   }}
                 ></Layer>
               </Source>

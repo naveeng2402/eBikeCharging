@@ -9,6 +9,6 @@ export const exitNavigationAnim: Variants = {
   visible: {
     translateY: 0,
     opacity: 1,
-    transition: { ease: "linear" },
+    transition: { duration: 0.1, ease: "linear" },
   },
 };
